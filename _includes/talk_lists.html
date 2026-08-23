@@ -1,0 +1,12 @@
+{%- comment -%}
+Splits _data/talks.yml into two lists, both available to the including page:
+
+  upcoming  talks dated today or later, soonest first (undated talks last)
+  past      talks dated before today, most recent first
+{%- endcomment -%}
+{%- assign today = 'now' | date: '%Y-%m-%d' -%}
+{%- assign by_date = site.data.talks | sort: 'date' -%}
+{%- assign dated_upcoming = by_date | where_exp: "t", "t.date >= today" -%}
+{%- assign undated = by_date | where_exp: "t", "t.date == nil" -%}
+{%- assign upcoming = dated_upcoming | concat: undated -%}
+{%- assign past = by_date | where_exp: "t", "t.date < today" | reverse -%}

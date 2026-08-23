@@ -1,0 +1,28 @@
+# Group news, shown on the home page between the overview and the members.
+#
+# The whole section disappears if this file is empty, so delete every entry to
+# hide it. Headings and the "show more" behaviour are configured under
+# `home.news` in _data/site.yml.
+#
+# Required: date (YYYY-MM-DD), text
+# Optional: title, link, link_text
+#
+# `text` supports markdown, so links can also be written inline:
+#   text: "Our paper was accepted at [STOC 2027](https://example.com)."
+#
+# Items are sorted by date, most recent first — order here does not matter.
+
+- date: "2026-08-10"
+  title: "Best Paper Award at ICALP 2026"
+  text: "Congratulations to Dr. Anna Kowalski, whose work on cache-oblivious data structures received the Best Paper Award."
+  link: "https://example.com/icalp-2026"
+  link_text: "Read more"
+
+- date: "2026-07-01"
+  title: "New group members"
+  text: "We are delighted to welcome James Wilson, who joins the group as a PhD student working on quantum algorithms."
+
+- date: "2026-06-05"
+  text: "The group is hosting the Foundations of Computing Workshop in September. Registration is now open."
+  link: "https://example.com/workshop"
+  link_text: "Workshop website"

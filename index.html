@@ -1,0 +1,79 @@
+---
+layout: default
+---
+
+{%- assign home = site.data.site.home -%}
+
+<section id="about" class="content-section">
+    <div class="description">{{ home.about.description | markdownify }}</div>
+</section>
+
+{% if site.data.news and site.data.news.size > 0 %}
+<hr class="divider">
+
+<section id="news" class="content-section">
+    {% include section_head.html config=home.news %}
+    {% assign news_items = site.data.news | sort: 'date' | reverse %}
+    {% if home.news.limit and home.news.limit > 0 %}
+        {% assign news_items = news_items | slice: 0, home.news.limit %}
+    {% endif %}
+    {% include news.html items=news_items %}
+</section>
+{% endif %}
+
+<hr class="divider">
+
+<section id="organisers" class="content-section">
+    {% include section_head.html config=home.organisers %}
+    {% include people.html people=site.data.people.organisers %}
+</section>
+
+<section id="members" class="content-section">
+    {% include section_head.html config=home.members %}
+    {% include people.html people=site.data.people.members %}
+</section>
+
+<section id="secondary-members" class="content-section">
+    {% include section_head.html config=home.secondary_members %}
+    {% include people.html people=site.data.people.secondary_members %}
+</section>
+
+<hr class="divider">
+
+<section id="seminar" class="content-section talks-section">
+    <h2>{{ home.seminar.heading }}</h2>
+    <div class="section-intro">{{ home.seminar.description | markdownify }}</div>
+
+    {% assign organiser = site.data.people.seminar_organiser %}
+    {% if organiser %}
+    <h3 class="subheading">{{ home.seminar.organiser_heading }}</h3>
+    <ul class="people">
+        {% include person.html person=organiser %}
+    </ul>
+    {% endif %}
+
+    <h3 class="subheading">{{ home.seminar.upcoming_heading }}</h3>
+
+    {%- comment -%}
+    Show the next upcoming talk plus the most recent past talk, so the list is
+    always the two talks closest to today and always includes what is next.
+    {%- endcomment -%}
+    {% include talk_lists.html %}
+    {% if past.size > 0 %}
+        {% assign highlighted = upcoming | slice: 0, 1 | concat: past | slice: 0, 2 %}
+    {% else %}
+        {% assign highlighted = upcoming | slice: 0, 2 %}
+    {% endif %}
+
+    {% if highlighted.size > 0 %}
+        {% for talk in highlighted %}
+            {% include talk.html talk=talk %}
+        {% endfor %}
+    {% else %}
+        <p class="no-talks">{{ home.seminar.no_talks }}</p>
+    {% endif %}
+
+    <p class="section-link">
+        <a href="{{ '/seminar/' | relative_url }}" class="btn-link">{{ home.seminar.link_text }}</a>
+    </p>
+</section>

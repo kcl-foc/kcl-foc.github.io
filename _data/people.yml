@@ -1,0 +1,75 @@
+# ---------------------------------------------------------------------------
+# Everyone who appears on the site, in four groups. People are shown in the
+# order they are listed here.
+#
+#   organisers         -> "Organisers" section on the home page
+#   seminar_organiser  -> seminar organiser, on the home and seminar pages
+#   members            -> "Members" section on the home page
+#   secondary_members  -> "Associate Members" section on the home page
+#
+# Fields:
+#   name         required
+#   email        required
+#   role         organisers and seminar_organiser only (e.g. "Group Head")
+#   job_title    optional (members and secondary members)
+#   website      optional
+#   kcl_profile  optional
+#
+# Section headings and intro text are configured in _data/site.yml.
+# ---------------------------------------------------------------------------
+
+organisers:
+  - name: "Prof. Alice Fairweather"
+    role: "Group Head"
+    email: "alice.fairweather@kcl.ac.uk"
+
+  - name: "Dr. Edwin Lock"
+    role: "Deputy Head"
+    email: "edwin.lock@kcl.ac.uk"
+
+seminar_organiser:
+  name: "Dr. Edwin Lock"
+  role: "Seminar Organiser"
+  email: "edwin.lock@kcl.ac.uk"
+  website: ""
+
+members:
+  - name: "Prof. Alice Fairweather"
+    email: "alice.fairweather@kcl.ac.uk"
+    job_title: "Professor of Computer Science"
+    website: "https://example.com/~fairweather"
+    kcl_profile: "https://kcl.ac.uk/people/alice-fairweather"
+
+  - name: "Dr. Edwin Lock"
+    email: "edwin.lock@kcl.ac.uk"
+    job_title: "Lecturer in Computer Science"
+    website: "https://www.edwinlock.com"
+    kcl_profile: "https://kcl.ac.uk/people/edwin-lock"
+
+  - name: "Dr. Priya Sharma"
+    email: "priya.sharma@kcl.ac.uk"
+    job_title: "Senior Lecturer"
+    kcl_profile: "https://kcl.ac.uk/people/priya-sharma"
+
+  - name: "Dr. Anna Kowalski"
+    email: "anna.kowalski@kcl.ac.uk"
+    job_title: "Postdoctoral Research Associate"
+    website: "https://example.com/~akowalski"
+    kcl_profile: "https://kcl.ac.uk/people/anna-kowalski"
+
+  - name: "James Wilson"
+    email: "james.wilson@kcl.ac.uk"
+    job_title: "PhD Student"
+    kcl_profile: "https://kcl.ac.uk/people/james-wilson"
+
+secondary_members:
+  - name: "Prof. Michael O'Brien"
+    email: "michael.obrien@kcl.ac.uk"
+    job_title: "Professor of Artificial Intelligence"
+    website: "https://example.com/~obrien"
+    kcl_profile: "https://kcl.ac.uk/people/michael-obrien"
+
+  - name: "Dr. Sarah Chen"
+    email: "sarah.chen@kcl.ac.uk"
+    job_title: "Lecturer in Data Science"
+    kcl_profile: "https://kcl.ac.uk/people/sarah-chen"

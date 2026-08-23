@@ -1,0 +1,9 @@
+{%- comment -%}
+Renders a list of people from _data/people.yml. Expects: include.people
+Use _includes/person.html directly for a single person.
+{%- endcomment -%}
+<ul class="people">
+    {% for person in include.people %}
+    {% include person.html person=person %}
+    {% endfor %}
+</ul>

@@ -1,0 +1,23 @@
+{%- comment -%}
+Renders a single person as a list item. Expects: include.person
+Fields: name, email, role (optional), job_title (optional),
+        website (optional), kcl_profile (optional)
+{%- endcomment -%}
+{%- assign person = include.person -%}
+{%- assign labels = site.data.site.labels -%}
+<li class="person">
+    <span class="person-name">{{ person.name }}</span>
+    {% if person.role %}<span class="person-role">{{ person.role }}</span>{% endif %}
+    {% if person.job_title %}<span class="person-title">{{ person.job_title }}</span>{% endif %}
+    <div class="person-links">
+        {% if person.email %}
+        <a href="mailto:{{ person.email }}" class="person-link">{{ person.email }}</a>
+        {% endif %}
+        {% if person.website and person.website != "" %}
+        <a href="{{ person.website }}" class="person-link" target="_blank">{{ labels.website }}</a>
+        {% endif %}
+        {% if person.kcl_profile and person.kcl_profile != "" %}
+        <a href="{{ person.kcl_profile }}" class="person-link" target="_blank">{{ labels.kcl_profile }}</a>
+        {% endif %}
+    </div>
+</li>

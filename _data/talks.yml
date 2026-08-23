@@ -1,0 +1,50 @@
+# Seminar talks. Order here does not matter — talks are sorted by date.
+#
+# Required: title, speaker
+# Optional: date (YYYY-MM-DD), time (HH:MM-HH:MM), room, abstract,
+#           video_link (Teams/Zoom), person_url, paper_url
+#
+# Talks dated today or later appear under "Upcoming Talks" (soonest first);
+# earlier talks appear under "Past Talks" (most recent first). A talk with no
+# date is treated as upcoming and listed last.
+#
+# Abstracts support markdown formatting.
+
+- title: "Optimal Algorithms for Dynamic Graph Connectivity"
+  speaker: "Dr. Sarah Chen"
+  date: "2026-09-16"
+  time: "14:00-15:00"
+  room: "K5.10"
+  abstract: "We present new algorithms for maintaining connectivity information in dynamic graphs with polylogarithmic update time. Our approach uses a novel hierarchical decomposition that improves upon previous bounds by a logarithmic factor."
+  person_url: "https://example.com/~schen"
+  paper_url: "https://arxiv.org/abs/example"
+
+- title: "Approximation Algorithms for the Traveling Salesman Problem"
+  speaker: "Prof. Michael O'Brien"
+  date: "2026-09-30"
+  time: "14:00-15:30"
+  room: "K5.12"
+  abstract: "This talk surveys recent progress on approximation algorithms for TSP and related problems. We discuss the breakthrough results achieving better-than-1.5 approximation ratios and explore connections to linear programming relaxations."
+
+- title: "Cache-Oblivious Data Structures: Theory and Practice"
+  speaker: "Dr. Anna Kowalski"
+  date: "2026-08-12"
+  time: "14:00-15:00"
+  room: "K5.10"
+  abstract: "Cache-oblivious algorithms achieve optimal performance across all levels of the memory hierarchy without explicit knowledge of cache parameters. We present recent advances in cache-oblivious B-trees and discuss their practical implementations."
+  video_link: "https://www.youtube.com/watch?v=example"
+  person_url: "https://example.com/~akowalski"
+
+- title: "Quantum Algorithms for Linear Algebra"
+  speaker: "Prof. James Wilson"
+  date: "2026-07-08"
+  time: "14:00-16:00"
+  room: "K5.10"
+  abstract: "Quantum computers offer potential speedups for fundamental linear algebra operations. We explore the HHL algorithm for solving linear systems and discuss recent improvements to its runtime and error bounds, along with practical limitations."
+
+- title: "Sublinear Algorithms for Massive Datasets"
+  speaker: "Dr. Priya Sharma"
+  date: "2026-06-17"
+  time: "14:00-15:00"
+  room: "K5.10"
+  abstract: "When data is too large to process in its entirety, sublinear algorithms provide approximate answers using only a small sample. We present new techniques for graph property testing and discuss applications to social network analysis."

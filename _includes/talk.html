@@ -1,0 +1,48 @@
+{%- comment -%}
+Renders a single talk. Expects: include.talk
+{%- endcomment -%}
+{%- assign talk = include.talk -%}
+{%- assign labels = site.data.site.labels -%}
+<article class="talk">
+    <div class="talk-header">
+        <h3 class="talk-title">{{ talk.title }}</h3>
+        <div class="talk-meta">
+            <span class="speaker">{{ talk.speaker }}</span>
+            {% if talk.date %}
+            <span class="separator">•</span>
+            <span class="date">{{ talk.date | date: "%d %B %Y" }}</span>
+            {% endif %}
+            {% if talk.time %}
+            <span class="separator">•</span>
+            <span class="time">{{ talk.time }}</span>
+            {% endif %}
+            {% if talk.room %}
+            <span class="separator">•</span>
+            <span class="room">{{ talk.room }}</span>
+            {% endif %}
+        </div>
+    </div>
+    <div class="talk-abstract">
+        {% if talk.abstract %}
+        {{ talk.abstract | markdownify }}
+        {% else %}
+        <p class="abstract-coming-soon">{{ labels.abstract_coming_soon }}</p>
+        {% endif %}
+    </div>
+    {% if talk.video_link or talk.person_url or talk.paper_url %}
+    <div class="talk-links">
+        {% if talk.video_link %}
+        <a href="{{ talk.video_link }}" class="talk-link" target="_blank">{{ labels.video_link }}</a>
+        {% endif %}
+        {% if talk.person_url %}
+        <a href="{{ talk.person_url }}" class="talk-link" target="_blank">{{ labels.person_url }}</a>
+        {% endif %}
+        {% if talk.paper_url %}
+        <a href="{{ talk.paper_url }}" class="talk-link" target="_blank">{{ labels.paper_url }}</a>
+        {% endif %}
+    </div>
+    {% endif %}
+    <button class="btn-add-calendar" onclick="downloadCalendar('{{ talk.title | escape }}', '{{ talk.speaker | escape }}', '{{ talk.date }}', '{{ talk.time }}', '{{ talk.room }}', '{{ talk.abstract | strip_html | escape }}')">
+        {{ labels.add_to_calendar }}
+    </button>
+</article>

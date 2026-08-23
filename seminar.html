@@ -1,0 +1,50 @@
+---
+layout: default
+permalink: /seminar/
+section: seminar_page
+---
+
+{%- assign s = site.data.site -%}
+{%- assign sp = s.seminar_page -%}
+
+<section id="seminar-info" class="content-section">
+    <div class="description">{{ sp.description | markdownify }}</div>
+
+    {% assign organiser = site.data.people.seminar_organiser %}
+    {% if organiser %}
+    <h3 class="subheading">{{ s.home.seminar.organiser_heading }}</h3>
+    <ul class="people">
+        {% include person.html person=organiser %}
+    </ul>
+    {% endif %}
+</section>
+
+<hr class="divider">
+
+{% include talk_lists.html %}
+
+<section id="upcoming-talks" class="talks-section">
+    <h2>{{ sp.upcoming_heading }}</h2>
+    {% if upcoming.size > 0 %}
+        {% for talk in upcoming %}
+            {% include talk.html talk=talk %}
+        {% endfor %}
+    {% else %}
+        <p class="no-talks">{{ sp.no_upcoming }}</p>
+    {% endif %}
+</section>
+
+<section id="past-talks" class="talks-section">
+    <h2>{{ sp.past_heading }}</h2>
+    {% if past.size > 0 %}
+        {% for talk in past %}
+            {% include talk.html talk=talk %}
+        {% endfor %}
+    {% else %}
+        <p class="no-talks">{{ sp.no_past }}</p>
+    {% endif %}
+</section>
+
+<p class="section-link">
+    <a href="{{ '/' | relative_url }}" class="btn-link">{{ sp.back_link_text }}</a>
+</p>

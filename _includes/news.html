@@ -1,0 +1,16 @@
+{%- comment -%}
+Renders a list of news items from _data/news.yml. Expects: include.items
+Each item: date, text, title (optional), link (optional), link_text (optional)
+{%- endcomment -%}
+<ul class="news">
+    {% for item in include.items %}
+    <li class="news-item">
+        <span class="news-date">{{ item.date | date: "%d %B %Y" }}</span>
+        {% if item.title %}<h3 class="news-title">{{ item.title }}</h3>{% endif %}
+        <div class="news-text">{{ item.text | markdownify }}</div>
+        {% if item.link %}
+        <a href="{{ item.link }}" class="news-link" target="_blank">{{ item.link_text | default: site.data.site.labels.news_link }}</a>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>

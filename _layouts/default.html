@@ -1,0 +1,50 @@
+{%- comment -%}
+Page text comes from _data/site.yml. A page selects its block with
+`section: seminar_page` in its front matter; the default is the home page.
+{%- endcomment -%}
+{%- assign tagline = site.data.site.tagline -%}
+{%- if page.section == 'seminar_page' -%}
+  {%- assign page_title = site.data.site.seminar_page.page_title -%}
+  {%- assign heading = site.data.site.seminar_page.heading -%}
+  {%- unless site.data.site.seminar_page.tagline == nil -%}
+    {%- assign tagline = site.data.site.seminar_page.tagline -%}
+  {%- endunless -%}
+{%- else -%}
+  {%- assign page_title = site.data.site.home.page_title -%}
+  {%- assign heading = site.data.site.title -%}
+  {%- unless site.data.site.home.tagline == nil -%}
+    {%- assign tagline = site.data.site.home.tagline -%}
+  {%- endunless -%}
+{%- endif -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="{{ '/assets/js/calendar.js' | relative_url }}"></script>
+</head>
+<body>
+    <div class="container">
+        <header id="general-info" class="info-section">
+            <h1 class="seminar-title">{{ heading }}</h1>
+            {% if tagline and tagline != "" %}
+            <p class="tagline">{{ tagline }}</p>
+            {% endif %}
+            <p class="department">{{ site.data.site.subtitle }}</p>
+        </header>
+
+        {{ content }}
+
+        {% assign email = site.data.site.footer.contact_email %}
+        {% assign email_placeholder = '{email' | append: '}' %}
+        {% assign contact_line = site.data.site.footer.contact_text | replace: email_placeholder, email %}
+        <footer class="footer">
+            <p class="contact">{{ contact_line | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+            <p>&copy; {{ site.data.site.footer.copyright_year }} {{ site.data.site.footer.copyright_holder }}. {{ site.data.site.footer.rights_text }}</p>
+        </footer>
+    </div>
+</body>
+</html>

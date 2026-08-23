@@ -1,0 +1,21 @@
+# Jekyll configuration for the Foundations of Computing group page
+title: Foundations of Computing
+description: Foundations of Computing group, Department of Informatics, King's College London
+url: "https://username.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+theme: null
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - prompt.md
+  - ada-seminars/
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/

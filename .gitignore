@@ -1,0 +1,90 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+
+# Bundler
+# Gemfile.lock is ignored because GitHub Pages resolves gems on its own; drop
+# this line if you would rather pin exact versions across machines.
+vendor/
+.bundle/
+Gemfile.lock
+
+# Node (only if tooling is ever added)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+
+# LLM / AI assistant tooling
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+.claude.json
+.mcp.json
+AGENTS.md
+.cursor/
+.cursorrules
+.cursorignore
+.aider*
+.github/copilot-instructions.md
+.codeium/
+.continue/
+.windsurf/
+.windsurfrules
+.specstory/
+.goose/
+.gemini/
+.aiderignore
+llm-scratch/
+
+# Project-local notes and reference material (kept on disk, not in the repo)
+prompt.md
+ada-seminars/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+
+# Editor files
+*.swp
+*.swo
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
