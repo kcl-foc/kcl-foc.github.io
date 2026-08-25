@@ -88,3 +88,6 @@ $RECYCLE.BIN/
 .env
 .env.*
 !.env.example
+
+# Local screenshots
+*.png

@@ -80,6 +80,35 @@ Each talk gets an "Add to Calendar" button that downloads an `.ics` file. To
 remove it, delete the `<button class="btn-add-calendar">` element in
 [_includes/talk.html](_includes/talk.html).
 
+## Password gate
+
+The site can be hidden behind a simple password prompt, configured under
+`gate:` in `_data/site.yml`. The current password is **`informatics`**.
+
+> **This is not security.** The page content is in the HTML that has already
+> been sent to the browser, so anyone using view-source, DevTools or `curl` can
+> read the site without entering the password. It only stops casual visitors
+> from glancing at an unfinished site. Do not put anything confidential behind
+> it.
+
+To change the password, generate a new hash and paste it into
+`gate.password_hash`:
+
+```bash
+echo -n 'your-new-password' | shasum -a 256
+```
+
+To switch the gate off, set `gate.enabled: false` — the prompt and its script
+are then left out of the built pages entirely.
+
+Notes:
+- The unlock lasts for the browser session, so it is entered once, not per page.
+- Gated pages carry `noindex, nofollow` so search engines skip them.
+- Password checking needs `https` or `localhost` (it uses the browser's crypto
+  API), which covers GitHub Pages and local development.
+- Consider keeping the GitHub repository private while the gate is up;
+  otherwise the content is readable straight from the repo.
+
 ## Setup for GitHub Pages
 
 1. Push to GitHub.
@@ -107,6 +136,8 @@ Visit `http://localhost:4000`.
   [assets/css/style.css](assets/css/style.css).
 - **Layout:** [_layouts/default.html](_layouts/default.html) (shared header and
   footer), [index.html](index.html), [seminar.html](seminar.html).
+- **Password gate:** [assets/js/gate.js](assets/js/gate.js), styled under
+  "Password gate" in [assets/css/style.css](assets/css/style.css).
 - **Reusable pieces:** [_includes/talk.html](_includes/talk.html) (one talk),
   [_includes/talk_lists.html](_includes/talk_lists.html) (splits talks into
   `upcoming` and `past`), [_includes/people.html](_includes/people.html) (a list
