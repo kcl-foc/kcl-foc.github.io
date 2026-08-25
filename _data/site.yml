@@ -49,6 +49,11 @@ home:
     # Show at most this many items on the home page (0 or omitted = show all).
     limit: 3
 
+  # The "People" section wraps the three lists below it.
+  people:
+    heading: "People"
+    intro: ""
+
   organisers:
     heading: "Organisers"
     intro: ""
@@ -135,9 +140,9 @@ labels:
 footer:
   # {email} is replaced with the address below.
   contact_text: "Contact [{email}](mailto:{email}) in case of issues."
-  contact_email: "edwin.lock@kcl.ac.uk"
+  contact_email: "foundations@kcl.ac.uk"
   copyright_year: "2026"
-  copyright_holder: "Edwin Lock"
+  copyright_holder: "Foundations of Computing, King's College London"
   rights_text: "All rights reserved."
 
 # --------------------------- Password gate (optional) ----------------------

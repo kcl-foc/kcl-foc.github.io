@@ -1,8 +1,15 @@
 {%- comment -%}
 Heading plus optional intro paragraph for a content section.
-Expects: include.config — a block from _data/site.yml with `heading` and `intro`.
+
+  include.config  a block from _data/site.yml with `heading` and `intro`
+  include.level   heading level, "2" (default) or "3" for a nested subsection
 {%- endcomment -%}
+{%- assign level = include.level | default: "2" -%}
+{% if level == "3" %}
+<h3 class="subsection-heading">{{ include.config.heading }}</h3>
+{% else %}
 <h2>{{ include.config.heading }}</h2>
+{% endif %}
 {% if include.config.intro and include.config.intro != "" %}
 <div class="section-intro">{{ include.config.intro | markdownify }}</div>
 {% endif %}

@@ -23,19 +23,23 @@ layout: default
 
 <hr class="divider">
 
-<section id="organisers" class="content-section">
-    {% include section_head.html config=home.organisers %}
-    {% include people.html people=site.data.people.organisers %}
-</section>
+<section id="people" class="content-section">
+    {% include section_head.html config=home.people %}
 
-<section id="members" class="content-section">
-    {% include section_head.html config=home.members %}
-    {% include people.html people=site.data.people.members %}
-</section>
+    <section id="organisers" class="subsection">
+        {% include section_head.html config=home.organisers level="3" %}
+        {% include people.html people=site.data.people.organisers %}
+    </section>
 
-<section id="secondary-members" class="content-section">
-    {% include section_head.html config=home.secondary_members %}
-    {% include people.html people=site.data.people.secondary_members %}
+    <section id="members" class="subsection">
+        {% include section_head.html config=home.members level="3" %}
+        {% include people.html people=site.data.people.members %}
+    </section>
+
+    <section id="secondary-members" class="subsection">
+        {% include section_head.html config=home.secondary_members level="3" %}
+        {% include people.html people=site.data.people.secondary_members %}
+    </section>
 </section>
 
 <hr class="divider">

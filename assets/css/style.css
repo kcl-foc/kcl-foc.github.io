@@ -250,13 +250,32 @@ body {
     margin-bottom: 45px;
 }
 
-.content-section h2 {
+/* Direct child only, so headings inside a nested .subsection keep their own
+   smaller style rather than inheriting this one. */
+.content-section > h2 {
     font-family: 'Libre Baskerville', serif;
     font-size: 1.8em;
     color: #1a1a1a;
     margin-bottom: 25px;
     padding-bottom: 15px;
     border-bottom: 1px solid #e5e5e5;
+}
+
+/* A group of related lists nested inside a section, e.g. the three people
+   lists under "People". Smaller than the section heading above them. */
+.subsection {
+    margin-bottom: 35px;
+}
+
+.subsection:last-child {
+    margin-bottom: 0;
+}
+
+.subsection-heading {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 18px;
 }
 
 .subheading {
