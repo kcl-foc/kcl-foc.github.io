@@ -139,3 +139,29 @@ footer:
   copyright_year: "2026"
   copyright_holder: "Edwin Lock"
   rights_text: "All rights reserved."
+
+# --------------------------- Password gate (optional) ----------------------
+# A simple JavaScript prompt that hides the site from casual visitors.
+#
+# NOT SECURE: the page content is already in the HTML sent to the browser, so
+# anyone using view-source, DevTools or curl can read it without the password.
+# It only stops people glancing at an unfinished site. Do not put anything
+# confidential on the page and rely on this.
+#
+# To change the password, generate the SHA-256 hash of the new one and paste it
+# into password_hash below:
+#
+#   echo -n 'your-new-password' | shasum -a 256
+#
+# Set enabled: false to switch the gate off entirely.
+gate:
+  enabled: true
+  # Current password: informatics
+  password_hash: "22d46300d8f7749fcbbd6e69439c38ab10cf804e07f83a0381ff2c4b77daa396"
+  heading: "Foundations of Computing"
+  prompt: "This site is not public yet. Please enter the password to continue."
+  button: "Enter"
+  placeholder: "Password"
+  error_message: "Incorrect password. Please try again."
+  # Shown when the browser cannot hash the password (needs https or localhost).
+  unavailable_message: "Password checking is unavailable in this browser."
