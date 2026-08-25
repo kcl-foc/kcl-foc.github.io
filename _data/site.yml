@@ -140,9 +140,9 @@ labels:
 footer:
   # {email} is replaced with the address below.
   contact_text: "Contact [{email}](mailto:{email}) in case of issues."
-  contact_email: "foundations@kcl.ac.uk"
+  contact_email: "edwin.lock@kcl.ac.uk"
   copyright_year: "2026"
-  copyright_holder: "Foundations of Computing, King's College London"
+  copyright_holder: "Edwin Lock"
   rights_text: "All rights reserved."
 
 # --------------------------- Password gate (optional) ----------------------
