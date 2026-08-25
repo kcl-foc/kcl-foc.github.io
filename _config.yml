@@ -1,8 +1,12 @@
 # Jekyll configuration for the Foundations of Computing group page
 title: Foundations of Computing
 description: Foundations of Computing group, Department of Informatics, King's College London
-url: "https://username.github.io"
-baseurl: ""
+# The site lives at https://edwinlock.github.io/foundations-of-computing/
+# `baseurl` is the path after the domain and must match the repository name,
+# otherwise CSS, JavaScript and internal links resolve to the wrong paths.
+# For a user site (edwinlock.github.io) set baseurl to "".
+url: "https://edwinlock.github.io"
+baseurl: "/foundations-of-computing"
 
 # Build settings
 markdown: kramdown
