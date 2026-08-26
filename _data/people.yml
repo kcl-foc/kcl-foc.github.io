@@ -19,18 +19,14 @@
 # ---------------------------------------------------------------------------
 
 organisers:
-  - name: "Prof. Alice Fairweather"
+  - name: Dr Bart de Keijzer"
     role: "Group Head"
-    email: "alice.fairweather@kcl.ac.uk"
-
-  - name: "Dr. Ben Carter"
-    role: "Deputy Head"
-    email: "ben.carter@kcl.ac.uk"
+    email: "bart.de_keijzer@kcl.ac.uk"
 
 seminar_organiser:
-  name: "Dr. Laura Nowak"
+  name: "TBC"
   role: "Seminar Organiser"
-  email: "laura.nowak@kcl.ac.uk"
+  email: "tbc@kcl.ac.uk"
   website: ""
 
 members:

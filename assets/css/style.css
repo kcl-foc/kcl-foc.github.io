@@ -61,6 +61,28 @@ body {
     margin-bottom: 15px;
 }
 
+/* Lists written in markdown inside a description or intro. The global reset
+   strips the browser's default list padding, so the indent is restored here;
+   without it the bullets sit flush with the paragraph text. */
+.description ul,
+.description ol,
+.section-intro ul,
+.section-intro ol,
+.news-text ul,
+.news-text ol,
+.talk-abstract ul,
+.talk-abstract ol {
+    padding-left: 1.5em;
+    margin-bottom: 15px;
+}
+
+.description li,
+.section-intro li,
+.news-text li,
+.talk-abstract li {
+    margin-bottom: 4px;
+}
+
 .description p:last-child {
     margin-bottom: 0;
 }

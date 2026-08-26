@@ -27,19 +27,20 @@ home:
 
   about:
     description: |
+      The Foundations of Computing group investigates the mathematical and conceptual foundations of computation. Its research focuses on rigorous methods, and their formal analysis, that underpin computer science, artificial intelligence, and data analytics, including algorithms, complexity, logic, models of computation, optimisation, game theory, database theory, and rigorous methods that underpin computer science, data analytics, and artificial intelligence. 
 
-      🚧 Website under construction! 🚧
+      **Keywords**
 
-      The Foundations of Computing group at King's College London studies the
-      mathematical and algorithmic principles that underpin computation. Our
-      research spans algorithms and complexity, algorithmic game theory and
-      economics, logic and verification, quantum computing, and the theory of
-      machine learning.
-
-      We are a friendly and collaborative group of faculty, postdoctoral
-      researchers and PhD students. We run a regular seminar series, host
-      visitors throughout the year, and welcome enquiries from prospective
-      students and collaborators.
+        - Algorithms and Complexity 
+        - Theoretical Computer Science 
+        - Logic and Semantics 
+        - Models of Computation 
+        - Algorithmic Game Theory 
+        - Computational Economics 
+        - Database Theory 
+        - Combinatorial Optimisation 
+        - Algorithm Engineering 
+        - Probabilistic Methods 
 
   # The News section is optional: it is hidden automatically when
   # _data/news.yml has no entries.
@@ -74,7 +75,7 @@ home:
     description: |
       The Foundations of Computing seminar brings together researchers from
       across the department and beyond to present new work on the theory of
-      computation. Talks are open to everyone — students, postdocs and faculty
+      computation. Talks are open to everyone, students, postdocs and faculty
       are all very welcome, and no prior familiarity with the speaker's area is
       assumed.
 
