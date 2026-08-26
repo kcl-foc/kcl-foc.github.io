@@ -16,9 +16,8 @@ Page text comes from _data/site.yml. A page selects its block with
     {%- assign tagline = site.data.site.home.tagline -%}
   {%- endunless -%}
 {%- endif -%}
-{%- assign gate = site.data.site.gate -%}
 <!DOCTYPE html>
-<html lang="en"{% if gate.enabled %} class="gated"{% endif %}>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,40 +25,8 @@ Page text comes from _data/site.yml. A page selects its block with
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="{{ '/assets/js/calendar.js' | relative_url }}"></script>
-    {% if gate.enabled %}
-    {%- comment -%}
-    The gate hides the page until a password is entered. It is a speed bump for
-    casual visitors, not security: the content below is already in this file.
-    The style block is inline and the script blocking so nothing is painted
-    before the check runs.
-    {%- endcomment -%}
-    <meta name="robots" content="noindex, nofollow">
-    <style>html.gated body > .container { visibility: hidden; }</style>
-    <script>
-      window.GATE_CONFIG = {
-        enabled: true,
-        password_hash: {{ gate.password_hash | jsonify }},
-        error_message: {{ gate.error_message | jsonify }},
-        unavailable_message: {{ gate.unavailable_message | jsonify }}
-      };
-    </script>
-    <script src="{{ '/assets/js/gate.js' | relative_url }}"></script>
-    {% endif %}
 </head>
 <body>
-    {% if gate.enabled %}
-    <div id="gate" class="gate">
-        <form id="gate-form" class="gate-box">
-            <h1 class="gate-heading">{{ gate.heading }}</h1>
-            <p class="gate-prompt">{{ gate.prompt }}</p>
-            <input id="gate-password" class="gate-input" type="password"
-                   placeholder="{{ gate.placeholder }}" autocomplete="current-password"
-                   aria-label="{{ gate.placeholder }}">
-            <button type="submit" class="gate-button">{{ gate.button }}</button>
-            <p id="gate-error" class="gate-error" role="alert"></p>
-        </form>
-    </div>
-    {% endif %}
     <div class="container">
         <header id="general-info" class="info-section">
             <h1 class="seminar-title">{{ heading }}</h1>
