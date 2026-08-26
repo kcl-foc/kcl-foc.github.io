@@ -2,7 +2,7 @@
 # All text that appears on the site is configured here.
 #
 #   _data/site.yml               <- this file: every heading, label and paragraph
-#   _data/people.yml             <- organisers, members, secondary members
+#   _data/people.yml             <- organisers, members, affiliate members
 #   _data/news.yml               <- group news items (optional section)
 #   _data/talks.yml              <- seminar talks
 #
@@ -62,8 +62,8 @@ home:
     heading: "Members"
     intro: ""
 
-  secondary_members:
-    heading: "Associate Members"
+  affiliate_members:
+    heading: "Affiliate Members"
     intro: |
       Colleagues in the Department of Informatics whose research connects
       closely with the work of the group.

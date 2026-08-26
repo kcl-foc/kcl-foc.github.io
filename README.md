@@ -9,7 +9,7 @@ King's College London. Everything on the site is edited through YAML files in
 | File | What it controls |
 | --- | --- |
 | `_data/site.yml` | **Every piece of text on the site**: titles, headings, section descriptions, button labels, footer. |
-| `_data/people.yml` | Everyone on the site, in four groups: `organisers`, `seminar_organiser`, `members`, `secondary_members`. |
+| `_data/people.yml` | Everyone on the site, in four groups: `organisers`, `seminar_organiser`, `members`, `affiliate_members`. |
 | `_data/news.yml` | Group news items. Optional — the section is hidden when this file has no entries. |
 | `_data/talks.yml` | Seminar talks (upcoming and past). |
 
@@ -18,7 +18,7 @@ lines for new paragraphs.
 
 ## Pages
 
-- `/` — group home page: description, organisers, members, secondary members,
+- `/` — group home page: description, organisers, members, affiliate members,
   seminar blurb, and the two talks closest to today (always including the next
   upcoming one), with a link to the full seminar page.
 - `/seminar/` — full seminar page: all upcoming talks (soonest first) followed
@@ -26,7 +26,7 @@ lines for new paragraphs.
 
 ## Adding a member
 
-Add an entry under `members:` (or `secondary_members:`) in `_data/people.yml`:
+Add an entry under `members:` (or `affiliate_members:`) in `_data/people.yml`:
 
 ```yaml
 members:

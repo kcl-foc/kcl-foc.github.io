@@ -14,19 +14,25 @@ compact; the link text is carried in title/aria-label for accessibility.
             {%- if person.email %}
             <a href="mailto:{{ person.email }}" class="person-icon"
                title="{{ labels.email }} {{ person.name }}" aria-label="{{ labels.email }} {{ person.name }}">
-                <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false">
-                    <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                          d="M3 6h18v12H3z M3 6l9 7 9-7"/>
+                {%- comment -%}Feather "mail"{%- endcomment -%}
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true" focusable="false">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
                 </svg>
             </a>
             {%- endif %}
             {%- if person.website and person.website != "" %}
             <a href="{{ person.website }}" class="person-icon" target="_blank" rel="noopener"
                title="{{ labels.website }}: {{ person.name }}" aria-label="{{ labels.website }}: {{ person.name }}">
-                <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false">
-                    <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
-                    <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                          d="M3 12h18 M12 3c2.5 2.7 2.5 15.3 0 18 M12 3c-2.5 2.7-2.5 15.3 0 18"/>
+                {%- comment -%}Feather "globe"{%- endcomment -%}
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
                 </svg>
             </a>
             {%- endif %}

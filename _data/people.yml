@@ -5,13 +5,13 @@
 #   organisers         -> "Organisers" section on the home page
 #   seminar_organiser  -> seminar organiser, on the home and seminar pages
 #   members            -> "Members" section on the home page
-#   secondary_members  -> "Associate Members" section on the home page
+#   affiliate_members  -> "Affiliate Members" section on the home page
 #
 # Fields:
 #   name         required
 #   email        required
 #   role         organisers and seminar_organiser only (e.g. "Group Head")
-#   job_title    optional (members and secondary members)
+#   job_title    optional (members and affiliate members)
 #   website      optional; a personal homepage or KCL profile page, whichever
 #                you would rather link to
 #
@@ -30,43 +30,123 @@ seminar_organiser:
   website: ""
 
 members:
-  - name: "Prof. Alice Fairweather"
-    email: "alice.fairweather@kcl.ac.uk"
-    job_title: "Professor of Computer Science"
-    website: "https://example.com/~fairweather"
-
-  - name: "Dr. Ben Carter"
-    email: "ben.carter@kcl.ac.uk"
+  - name: "Dr Silvia Butti"
+    email: "silvia.butti@kcl.ac.uk"
     job_title: "Lecturer in Computer Science"
-    website: "https://example.com/~bcarter"
+    website: "https://www.kcl.ac.uk/people/silvia-butti"
 
-  - name: "Dr. Priya Sharma"
-    email: "priya.sharma@kcl.ac.uk"
+  - name: "Dr Panagiotis Charalampopoulos"
+    email: "p.charalampopoulos@kcl.ac.uk"
+    job_title: "Lecturer in Computer Science"
+    website: "https://www.kcl.ac.uk/people/panagiotis-charalampopoulos-1"
+
+  - name: "Dr Hubie Chen"
+    email: "hubie.chen@kcl.ac.uk"
     job_title: "Senior Lecturer"
-    website: "https://kcl.ac.uk/people/priya-sharma"
+    website: "https://www.kcl.ac.uk/people/hubie-chen"
 
-  - name: "Dr. Laura Nowak"
-    email: "laura.nowak@kcl.ac.uk"
-    job_title: "Senior Lecturer"
-    website: "https://kcl.ac.uk/people/laura-nowak"
+  - name: "Dr Christopher Hampson"
+    email: "christopher.hampson@kcl.ac.uk"
+    job_title: "Senior Lecturer in Computer Science (Education)"
+    website: "https://www.kcl.ac.uk/people/christopher-hampson"
 
-  - name: "Dr. Anna Kowalski"
-    email: "anna.kowalski@kcl.ac.uk"
-    job_title: "Postdoctoral Research Associate"
-    website: "https://example.com/~akowalski"
+  - name: "Dr Agi Kurucz"
+    email: "agi.kurucz@kcl.ac.uk"
+    job_title: "Reader in Logic and Computation"
+    website: "https://www.kcl.ac.uk/people/agi-kurucz"
 
-  - name: "James Wilson"
-    email: "james.wilson@kcl.ac.uk"
-    job_title: "PhD Student"
-    website: "https://kcl.ac.uk/people/james-wilson"
+  - name: "Dr Dimitrios Letsios"
+    email: "dimitrios.letsios@kcl.ac.uk"
+    job_title: "Senior Lecturer in Data Science"
+    website: "https://www.kcl.ac.uk/people/dimitrios-letsios"
 
-secondary_members:
-  - name: "Prof. Michael O'Brien"
-    email: "michael.obrien@kcl.ac.uk"
-    job_title: "Professor of Artificial Intelligence"
-    website: "https://example.com/~obrien"
+  - name: "Dr Edwin Lock"
+    email: "edwin.lock@kcl.ac.uk"
+    job_title: "Lecturer in Computer Science Education"
+    website: "https://www.kcl.ac.uk/people/edwin-lock"
 
-  - name: "Dr. Sarah Chen"
-    email: "sarah.chen@kcl.ac.uk"
-    job_title: "Lecturer in Data Science"
-    website: "https://kcl.ac.uk/people/sarah-chen"
+  - name: "Dr Grigorios Loukides"
+    email: "grigorios.loukides@kcl.ac.uk"
+    job_title: "Senior Lecturer in Computer Science"
+    website: "https://www.kcl.ac.uk/people/grigorios-loukides"
+
+  - name: "Dr Maria Polukarov"
+    email: "maria.polukarov@kcl.ac.uk"
+    job_title: "Reader in Computer Science"
+    website: "https://www.kcl.ac.uk/people/maria-polukarov"
+
+  - name: "Prof Tomasz Radzik"
+    email: "tomasz.radzik@kcl.ac.uk"
+    job_title: "Professor in Computer Science"
+    website: "https://www.kcl.ac.uk/people/tomasz-radzik"
+
+  - name: "Dr Kathleen Steinhofel"
+    email: "kathleen.steinhofel@kcl.ac.uk"
+    job_title: "Reader in Computer Science"
+    website: "https://www.kcl.ac.uk/people/kathleen-steinhofel"
+
+  - name: "Prof Carmine Ventre"
+    email: "carmine.ventre@kcl.ac.uk"
+    job_title: "Professor of Computer Science"
+    website: "https://www.kcl.ac.uk/people/carmine-ventre"
+
+affiliate_members:
+  - name: "Dr Mohammad Abdulaziz"
+    email: "mohammad.abdulaziz@kcl.ac.uk"
+    job_title: "Lecturer in Artificial Intelligence"
+    website: "https://www.kcl.ac.uk/people/mohammad-abdulaziz"
+
+  - name: "Prof Martin Albrecht"
+    email: "martin.albrecht@kcl.ac.uk"
+    job_title: "Chair of Cryptography"
+    website: "https://www.kcl.ac.uk/people/martin-albrecht"
+
+  - name: "Prof Maribel Fernandez"
+    email: "maribel.fernandez@kcl.ac.uk"
+    job_title: "Professor in Computer Science"
+    website: "https://www.kcl.ac.uk/people/maribel-fernandez"
+
+  - name: "Dr Letizia Gionfrida"
+    email: "letizia.gionfrida@kcl.ac.uk"
+    job_title: "Lecturer in Computer Vision"
+    website: "https://www.kcl.ac.uk/people/letizia-gionfrida"
+
+  - name: "Dr Stefanos Leonardos"
+    email: "stefanos.leonardos@kcl.ac.uk"
+    job_title: "Lecturer in Machine Learning"
+    website: "https://www.kcl.ac.uk/people/stefanos-leonardos"
+
+  - name: "Prof Peter McBurney"
+    email: "peter.mcburney@kcl.ac.uk"
+    job_title: "Professor of Computer Science"
+    website: "https://www.kcl.ac.uk/people/peter-mcburney"
+
+  - name: "Prof Mohammad Reza Mousavi"
+    email: "mohammad.mousavi@kcl.ac.uk"
+    job_title: "Professor of Software Engineering"
+    website: "https://www.kcl.ac.uk/people/mohammad-reza-mousavi"
+
+  - name: "Dr Ngoc Khanh Nguyen"
+    email: "ngoc_khanh.nguyen@kcl.ac.uk"
+    job_title: "Lecturer in Cryptography"
+    website: "https://www.kcl.ac.uk/people/ngoc-khanh-nguyen"
+
+  - name: "Dr Eamonn Postlethwaite"
+    email: "eamonn.postlethwaite@kcl.ac.uk"
+    job_title: "Lecturer in Cryptography"
+    website: "https://www.kcl.ac.uk/people/eamonn-postlethwaite"
+
+  # No www.kcl.ac.uk/people page; email is not published on the Pure portal.
+  - name: "Dr Zia Ush Shamszaman"
+    job_title: "Lecturer in Cybersecurity Education SE Asia"
+    website: "https://kclpure.kcl.ac.uk/portal/en/persons/zia_ush.shamszaman"
+
+  - name: "Dr Christian Urban"
+    email: "christian.urban@kcl.ac.uk"
+    job_title: "Lecturer in Computer Science"
+    website: "https://www.kcl.ac.uk/people/christian-urban"
+
+  - name: "Dr Steffen Zschaler"
+    email: "steffen.zschaler@kcl.ac.uk"
+    job_title: "Reader in Computer Science"
+    website: "https://www.kcl.ac.uk/people/steffen-zschaler"
