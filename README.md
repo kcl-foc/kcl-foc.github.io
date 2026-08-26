@@ -34,11 +34,14 @@ members:
     email: "jane.doe@kcl.ac.uk"
     job_title: "Lecturer in Computer Science"   # optional
     website: "https://example.com/~jdoe"        # optional
-    kcl_profile: "https://kcl.ac.uk/people/jane-doe"  # optional
 ```
 
 People appear in the order they are listed. Entries under `organisers:` take a
 `role:` (e.g. "Group Head") instead of a `job_title:`.
+
+Email and website show as small icons beside the name, keeping each entry to
+two lines. `website` takes one link per person — a personal homepage or a KCL
+profile page, whichever you prefer.
 
 ## Adding a news item
 

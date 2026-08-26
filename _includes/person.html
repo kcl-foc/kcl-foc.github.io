@@ -1,23 +1,37 @@
 {%- comment -%}
 Renders a single person as a list item. Expects: include.person
-Fields: name, email, role (optional), job_title (optional),
-        website (optional), kcl_profile (optional)
+Fields: name, email, role (optional), job_title (optional), website (optional)
+
+Email and website are shown as small icons beside the name to keep each entry
+compact; the link text is carried in title/aria-label for accessibility.
 {%- endcomment -%}
 {%- assign person = include.person -%}
 {%- assign labels = site.data.site.labels -%}
 <li class="person">
-    <span class="person-name">{{ person.name }}</span>
+    <div class="person-head">
+        <span class="person-name">{{ person.name }}</span>
+        <span class="person-icons">
+            {%- if person.email %}
+            <a href="mailto:{{ person.email }}" class="person-icon"
+               title="{{ labels.email }} {{ person.name }}" aria-label="{{ labels.email }} {{ person.name }}">
+                <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false">
+                    <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          d="M3 6h18v12H3z M3 6l9 7 9-7"/>
+                </svg>
+            </a>
+            {%- endif %}
+            {%- if person.website and person.website != "" %}
+            <a href="{{ person.website }}" class="person-icon" target="_blank" rel="noopener"
+               title="{{ labels.website }}: {{ person.name }}" aria-label="{{ labels.website }}: {{ person.name }}">
+                <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          d="M3 12h18 M12 3c2.5 2.7 2.5 15.3 0 18 M12 3c-2.5 2.7-2.5 15.3 0 18"/>
+                </svg>
+            </a>
+            {%- endif %}
+        </span>
+    </div>
     {% if person.role %}<span class="person-role">{{ person.role }}</span>{% endif %}
     {% if person.job_title %}<span class="person-title">{{ person.job_title }}</span>{% endif %}
-    <div class="person-links">
-        {% if person.email %}
-        <a href="mailto:{{ person.email }}" class="person-link">{{ person.email }}</a>
-        {% endif %}
-        {% if person.website and person.website != "" %}
-        <a href="{{ person.website }}" class="person-link" target="_blank">{{ labels.website }}</a>
-        {% endif %}
-        {% if person.kcl_profile and person.kcl_profile != "" %}
-        <a href="{{ person.kcl_profile }}" class="person-link" target="_blank">{{ labels.kcl_profile }}</a>
-        {% endif %}
-    </div>
 </li>

@@ -30,7 +30,6 @@ home:
       The Foundations of Computing group investigates the mathematical and conceptual foundations of computation. Its research focuses on rigorous methods, and their formal analysis, that underpin computer science, artificial intelligence, and data analytics, including algorithms, complexity, logic, models of computation, optimisation, game theory, database theory, and rigorous methods that underpin computer science, data analytics, and artificial intelligence. 
 
       **Keywords**
-
         - Algorithms and Complexity 
         - Theoretical Computer Science 
         - Logic and Semantics 
@@ -133,9 +132,9 @@ labels:
   add_to_calendar: "Add to Calendar"
   # Default text for a news item's link, when the item sets no `link_text`.
   news_link: "Read more"
-  # Member link buttons.
+  # Tooltips on the person icons (the name is appended automatically).
+  email: "Email"
   website: "Website"
-  kcl_profile: "KCL Profile"
 
 # --------------------------------- Footer ----------------------------------
 footer:

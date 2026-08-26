@@ -12,14 +12,14 @@
 #   email        required
 #   role         organisers and seminar_organiser only (e.g. "Group Head")
 #   job_title    optional (members and secondary members)
-#   website      optional
-#   kcl_profile  optional
+#   website      optional; a personal homepage or KCL profile page, whichever
+#                you would rather link to
 #
 # Section headings and intro text are configured in _data/site.yml.
 # ---------------------------------------------------------------------------
 
 organisers:
-  - name: Dr Bart de Keijzer"
+  - name: "Dr Bart de Keijzer"
     role: "Group Head"
     email: "bart.de_keijzer@kcl.ac.uk"
 
@@ -34,43 +34,39 @@ members:
     email: "alice.fairweather@kcl.ac.uk"
     job_title: "Professor of Computer Science"
     website: "https://example.com/~fairweather"
-    kcl_profile: "https://kcl.ac.uk/people/alice-fairweather"
 
   - name: "Dr. Ben Carter"
     email: "ben.carter@kcl.ac.uk"
     job_title: "Lecturer in Computer Science"
     website: "https://example.com/~bcarter"
-    kcl_profile: "https://kcl.ac.uk/people/ben-carter"
 
   - name: "Dr. Priya Sharma"
     email: "priya.sharma@kcl.ac.uk"
     job_title: "Senior Lecturer"
-    kcl_profile: "https://kcl.ac.uk/people/priya-sharma"
+    website: "https://kcl.ac.uk/people/priya-sharma"
 
   - name: "Dr. Laura Nowak"
     email: "laura.nowak@kcl.ac.uk"
     job_title: "Senior Lecturer"
-    kcl_profile: "https://kcl.ac.uk/people/laura-nowak"
+    website: "https://kcl.ac.uk/people/laura-nowak"
 
   - name: "Dr. Anna Kowalski"
     email: "anna.kowalski@kcl.ac.uk"
     job_title: "Postdoctoral Research Associate"
     website: "https://example.com/~akowalski"
-    kcl_profile: "https://kcl.ac.uk/people/anna-kowalski"
 
   - name: "James Wilson"
     email: "james.wilson@kcl.ac.uk"
     job_title: "PhD Student"
-    kcl_profile: "https://kcl.ac.uk/people/james-wilson"
+    website: "https://kcl.ac.uk/people/james-wilson"
 
 secondary_members:
   - name: "Prof. Michael O'Brien"
     email: "michael.obrien@kcl.ac.uk"
     job_title: "Professor of Artificial Intelligence"
     website: "https://example.com/~obrien"
-    kcl_profile: "https://kcl.ac.uk/people/michael-obrien"
 
   - name: "Dr. Sarah Chen"
     email: "sarah.chen@kcl.ac.uk"
     job_title: "Lecturer in Data Science"
-    kcl_profile: "https://kcl.ac.uk/people/sarah-chen"
+    website: "https://kcl.ac.uk/people/sarah-chen"
